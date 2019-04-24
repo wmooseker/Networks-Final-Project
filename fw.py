@@ -49,11 +49,11 @@ def printSolution(dist):
 	for i in range(V): 
 		for j in range(V): 
 			if(dist[i][j] == INF): 
-				print "%7s" %("INF"), 
+				print ("%7s" %("INF"),) 
 			else: 
-				print "%7d\t" %(dist[i][j]), 
+				print ("%7d\t" %(dist[i][j]),) 
 			if j == V-1: 
-				print ""
+				print ("")
 
 graph = [[0,5,INF,10], 
              [INF,0,3,INF], 
