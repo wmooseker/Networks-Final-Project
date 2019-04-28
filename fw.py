@@ -1,7 +1,7 @@
 # Python Program for Floyd Warshall Algorithm
 
 # Number of vertices in the graph
-V = 4
+V = 9
 
 # Define infinity as the large enough value. This value will be
 # used for vertices not connected to each other
@@ -54,10 +54,15 @@ def printSolution(dist):
 			if j == V-1:
 				print ("")
 
-graph = [[0,5,INF,10],
-             [INF,0,3,INF],
-             [INF, INF, 0,   1],
-             [INF, INF, INF, 0]
+graph = [[0,2,INF,5,INF,INF,INF,INF,INF],
+             [2,0,7,INF,1,INF,INF,INF,INF],
+             [INF, 7, 0,INF,INF,9,INF,INF,INF],
+             [5, INF, INF, 0, 3, INF,3,INF,INF],
+	     [INF, 1, INF, 3,0,2,INF,4,INF],
+	     [INF, INF, 9, INF,2,0,INF,INF,6],
+	     [INF, INF, INF, 3,INF,INF,0,5,INF],
+	     [INF, INF, INF, INF,4,INF,5,0,8],
+	     [INF, INF, INF, INF,INF,6,INF,8,0]
         ]
 # Print the solution
 floydWarshall(graph);
