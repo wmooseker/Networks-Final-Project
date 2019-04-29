@@ -1,5 +1,7 @@
 # Python Program for Floyd Warshall Algorithm
 
+from graphviz import Graph
+
 # Number of vertices in the graph
 V = 9
 
@@ -68,5 +70,35 @@ graph = [[0,2,INF,5,INF,INF,INF,INF,INF],
 	     [INF, INF, INF, INF,4,INF,5,0,8],
 	     [INF, INF, INF, INF,INF,6,INF,8,0]
         ]
+
+dot = Graph(comment = 'Topology')
+dot.node('A')
+dot.node('B')
+dot.node('C')
+dot.node('D')
+dot.node('E')
+dot.node('F')
+dot.node('G')
+dot.node('H')
+dot.node('I')
+
+dot.edge('A', 'B', label = '2')
+dot.edge('A', 'D', label = '5')
+dot.edge('B', 'C', label = '7')
+dot.edge('B', 'E', label = '1')
+dot.edge('C', 'F', label = '9')
+dot.edge('D', 'E', label = '3')
+dot.edge('D', 'G', label = '3')
+dot.edge('E', 'H', label = '4')
+dot.edge('E', 'F', label = '2')
+dot.edge('H', 'G', label = '5')
+dot.edge('H', 'I', label = '8')
+dot.edge('F', 'I', label = '6')
+
+dot.view()
+
+r = Graph(comment = 'result')
+
+
 # Print the solution
 floydWarshall(graph);
