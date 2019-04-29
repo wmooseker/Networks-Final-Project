@@ -23,12 +23,23 @@ def randClicked():
     #find random path here
 
 def enterClicked():
-    enterLbl = Label(window, text="Please enter two nodes:")
+    enterLbl = Label(window, text="Starting node:")
     enterLbl.grid(column=0, row=3)
-    txt = Entry(window, width=10)
-    txt.grid(column=1, row=3)
+    node1 = Entry(window,width=10)
+    node1.grid(column=1, row=4)
+    lbl2 = Label(window, text="Ending node:")
+    lbl2.grid(column=0, row=5)
+    node2 = Entry(window, width=10)
+    node2.grid(column=1, row=6)
+    def calc():
+        print(node1.get())
+        print(node2.get())
+        #show path
+    calcBtn = Button(window, text="Show Path", command=calc)
+    calcBtn.grid(column=0,row=7)
+
     #find user-defined path here
-    
+
 instruction = Label(window, text="Click random if you want to find path between random nodes, else click enter:")
 instruction.grid(column=0, row=2)
 randBtn = Button(window, text="Random", command=randClicked)
