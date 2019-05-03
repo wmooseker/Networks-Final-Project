@@ -1,0 +1,27 @@
+// Topology
+graph {
+	A
+	B
+	C
+	D [color=red]
+	E [color=red]
+	F
+	G [color=red]
+	H [color=red]
+	I
+	E -- D [color=red]
+	D -- G [color=red]
+	G -- H [color=red]
+	A -- B [label=2]
+	A -- D [label=5]
+	B -- C [label=7]
+	B -- E [label=1]
+	C -- F [label=9]
+	D -- E [label=3]
+	D -- G [label=3]
+	E -- H [label=30]
+	E -- F [label=2]
+	H -- G [label=5]
+	H -- I [label=8]
+	F -- I [label=6]
+}
